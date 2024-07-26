@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n; 
+    cout << "Enter the size of array: ";
+    cin >> n;
+    
+    int a[n]; 
+    int i, target, flag = 0;
+    
+    cout << "Enter the array elements: ";
+    for (i = 0; i < n; i++) { 
+        cin >> a[i];
+    }
+    
+    cout << "Enter the target: ";
+    cin >> target;
+    
+    for (i = 0; i < n; i++) {
+        if (target == a[i]) {
+            flag = 1;
+            cout << "Element present at index " << i ;
+            break;
+        }
+    }
+    
+    if (flag == 0) {
+        cout << "Element not present.";
+    }
+
+    return 0;
+}
